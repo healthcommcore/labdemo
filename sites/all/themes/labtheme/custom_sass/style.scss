@@ -237,11 +237,32 @@ footer {
 }
 
 @media (max-width: 991px) {
+  .footer-legal {
+    text-align: center;
+    ul {
+      float: none;
+      display: inline-block;
+      margin: 0;
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 }
 
 @media (max-width: 767px) {
+  .navbar-toggle {
+    .icon-bar {
+      background: $white;
+      height: 3px;
+    }
+  }
+
+  .main-container {
+    ul {
+      margin: $list-margin-xs;
+    }
+  }
+
 }
 

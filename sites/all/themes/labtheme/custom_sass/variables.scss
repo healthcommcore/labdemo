@@ -1,4 +1,5 @@
 
+
 /* Mixins */
 @mixin menustyle {
 	float: left;
@@ -15,45 +16,57 @@
 /* Variables */
 
 /* Generic colors */
-$dk-blue: #17334b;
-$med-blue: #477aa6;
-$lt-blue: #9bc7ed;
+$dk-blue: #283A77;
+$med-dk-blue: #293B77;
+$med-blue: #478BD8;
+$med-lt-blue: #9ED7F7;
+$lt-blue: #B9E2F8;
 $dk-gray: #404347;
 $gray: #5C6470;
 $lt-gray: #ddd;
 $lt-bluegray: #c2ccd0;
 $white: #fff;
+$black: #000;
+$sienna: #D7522D;
+$lt-yellow: #FFF4C2;
 
 /* fonts */
-$body-font: 'OpenSansLight';
-$bold-font: 'OpenSansBold';
-$lt-font: 'OpenSansLight';
-$reg-font: 'OpenSansRegular';
-$semi-font: 'OpenSansSemibold';
+$body-font: 'LatoLight';
+$bold-font: 'LatoBold';
+$lt-font: 'LatoLight';
+$it-font: 'LatoLightItalic';
+$reg-font: 'LatoRegular';
+$semi-font: 'LatoRegular';
+
+$raleway-lt: 'ralewaylight';
+$raleway-reg: 'ralewayregular';
+$raleway-semi: 'ralewaysemibold';
+$raleway-bold: 'ralewaybold';
 
     
-$header-color: $dk-blue;
-$header-padding: 25px 0 30px;
+$header-color: $lt-blue;
+$header-padding-lg: 25px 0 30px;
 
-$search-position: 20px 0 0 0;
+$search-position-lg: 40px 0 0 0;
 $content-area-color: $white;
 
-$hero-position: 50px 0 0 30px;
-$hero-size: 3.0em;
-$hero-color: $white;
-$hero-style: $bold-font;
+$hero-position: 0;
+$hero-size-lg: 0;
+$hero-font-size-lg: 2.5rem;
+$hero-color: $sienna;
+$hero-style: $raleway-lt;
 $hero-img-ht: 400px;
 $hero-img-img: url('../images/hero_img2_reduced.jpg') 0 0 no-repeat;
 
 
 /* navbar */
-$nav-color: $med-blue;
-$navlink-bkgrd-active: $lt-blue;
-$navlink-link: $white;
-$navlink-link-active: $med-blue;
-$navlink-padding: 15px 15px 15px 15px;
-$navlink-size: 20px;
-$navlink-font: 'OpenSansRegular';
+$nav-color-lg: $med-lt-blue;
+$navlink-bkgrd-active: $white;
+$navlink-link-lg: $dk-blue;
+$navlink-link-active: $dk-blue;
+$navlink-padding-lg: 15px 15px 15px 15px;
+$navlink-size-lg: 20px;
+$navlink-font: 'ralewayregular';
 
 /* submenu */
 $submenu-color: $white;
@@ -66,41 +79,43 @@ $submenu-link-font: $reg-font;
 
 
 /* Main content */
-$body-color: $dk-gray;
+$body-color: $black;
 $body-size: 1.3em;
 $body-height: 1.5em;
-$link-color: $med-blue;
+$link-color: $med-dk-blue;
 
 
-$main-container-margin: 40px 0 0 0;
-$main-content-margin: 0 60px 80px 30px;
+$main-container-margin-lg: 40px 0 0 0;
+$main-content-margin-lg: 0 8% 80px 8%;
 
 
-$h1-size: 3.0em;
-$h1-color: $dk-blue;
-$h1-style: $lt-font;
-$h1-height: 1.2em;;
-$h1-margin: 20px 0;
+$h1-size-lg: 3.7rem;
+$h1-color: $sienna;
+$h1-style: $raleway-lt;
+$h1-height-lg: 1.2em;;
+$h1-margin-lg: 20px 0;
 
-$h2-size: 1.35em;
-$h2-color: $lt-blue;
-$h2-style: $reg-font;
+$h2-size: 2.0rem;
+$h2-color: $sienna;
+$h2-style: $raleway-semi;
 $h2-height: 1.5em;;
 $h2-margin: 20px 0 0 0;
 
 $h3-size: 1.0em;
-$h3-color: $gray;
-$h3-style: $bold-font;
+$h3-color: $med-blue;
+$h3-style: $raleway-bold;
 $h3-height: 1.0em;
-$h3-margin: 20px 0 3px 0;
+$h3-margin: 1.3em 0 0.05em 0;
 
+$paragraph-margin: 0 0 1.0em 0;
+$list-margin-lg: -0.8em 0 0.5em 0.8em;
 
-$footer-color: $gray;
-$footer-border-color: $lt-bluegray;
+$footer-color: $lt-yellow;
+$footer-border-color: $dk-blue;
 
 
 $footer-legal-size: 1.1em;
-$footer-font-color: $white;
+$footer-font-color: $dk-blue;
 
 h1, h2, h3, h4, strong {
   font-weight: normal;
@@ -109,4 +124,63 @@ h1, h2, h3, h4, strong {
 strong {
   font-family: $semi-font;
 }
+
+////////////
+// MEDIUM //
+////////////
+
+// Header
+$header-padding-md: 18px 0 22px;
+$logo-width-md: 90%;
+//$search-position-md:
+
+// Hero
+$hero-size-md: 0;
+$hero-font-size-md: 2.2rem;
+
+// Nav
+//$navlink-padding-md:
+//$navlink-size-md:
+
+$h1-size-md: 3.2rem;
+//$h1-height-md:
+//$h1-margin-md:
+
+
+////////////
+//. SMALL //
+////////////
+
+// Header
+$header-padding-sm: 12px 0 18px;
+$logo-width-sm: 85%;
+$search-position-sm: 30px 0 0 0;
+
+// Hero
+$hero-font-size-sm: 1.9rem;
+
+// Nav
+$navlink-size-sm: 16px;
+$navlink-padding-sm: 12px 15px;
+
+// body
+$main-content-margin-sm: 0 3% 80px 3%;
+$h1-size-sm: 2.7rem;
+$h2-size-sm: 1.6rem;
+
+
+//////////////////
+//. EXTRA SMALL //
+//////////////////
+
+$hero-font-size-xs: 1.6rem;
+$nav-color-xs: $dk-blue;
+$navlink-link-xs: $white;
+
+// Body
+$main-content-margin-xs: 0 2%;
+$h1-size-xs: 2.3rem;
+$h2-size-xs: 1.8rem;
+$h3-size-xs: 1.4rem;
+$list-margin-xs: -0.8em 0 0.5em 0em;
 
