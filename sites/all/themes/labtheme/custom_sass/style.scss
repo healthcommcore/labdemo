@@ -18,49 +18,49 @@ h1, h2, h3, h4, strong {
 }
 
 h1 {
-  font-size: $h1-size;
+  font-size: $h1-size-lg;
   color: $h1-color;
   font-family: $h1-style;
-  line-height: $h1-height;
-  margin: $h1-margin;
+  line-height: $h1-height-lg;
+  margin: $h1-margin-lg;
 }
 
 h2 {
-  font-size: $h2-size;
+  font-size: $h2-size-lg;
   color: $h2-color;
   font-family: $h2-style;
-  line-height: $h2-height;
-  margin: $h2-margin;
+  line-height: $h2-height-lg;
+  margin: $h2-margin-lg;
 }
 
 h3 {
-  font-size: $h3-size;
+  font-size: $h3-size-lg;
   color: $h3-color;
   font-family: $h3-style;
-  line-height: $h3-height;
-  margin: $h3-margin;
+  line-height: $h3-height-lg;
+  margin: $h3-margin-lg;
 }
 
 header {
   background: $header-color;
-  padding: $header-padding;
+  padding: $header-padding-lg;
   .logo img {
     margin-top: 20px;
   }
   .block-search {
-    margin: $search-position;
+    margin: $search-position-lg;
   }
 }
 
 .navbar-color {
-  background: $nav-color;
+  background: $nav-color-lg;
   font-family: $navlink-font;
 }
 
 .navbar-nav > li > a {
-  color: $navlink-link;
-  font-size: $navlink-size;
-  padding: $navlink-padding;
+  color: $navlink-link-lg;
+  font-size: $navlink-size-lg;
+  padding: $navlink-padding-lg;
 }
 
 .nav > li > a:hover,
@@ -76,7 +76,7 @@ header {
   @include border(top, 3px, $header-color);
   @include border(bottom, 3px, $header-color);
   h1 {
-    font-size: $hero-size;
+    font-size: $hero-size-lg;
     color: $hero-color;
     font-family: $hero-style;
     margin: $hero-position;
@@ -128,11 +128,11 @@ header {
 }
 
 .main-container-margin {
-  margin: $main-container-margin;
+  margin: $main-container-margin-lg;
 }
 
 .main-content-margin {
-  margin: $main-content-margin;
+  margin: $main-content-margin-lg;
 }
 
 .page-content {
@@ -237,6 +237,25 @@ footer {
 }
 
 @media (max-width: 991px) {
+  .footer-logos {
+    p, a {
+      margin-right: 0;
+    }
+    p {
+      display: block;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    a {
+      display: table;
+      margin: 25px auto;
+    }
+    .pull-left {
+      float: none !important;
+    }
+  }
   .footer-legal {
     text-align: center;
     ul {
