@@ -84,7 +84,58 @@
   <?php print $page_bottom; ?>
 
 <!-- Popup window for external links -->
+<style>
+  .show-search {
+    position: absolute;
+    z-index: 500;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: #DDE6EB 2px solid;
+    background: #515A71;
+    color: #fff;
+    top: 32px;
+    right: 11px;
+    font-size: 1.2em;
+  }
+  .show-search .glyphicon-search {
+    top: 3px;
+  }
+</style>
+
 <script>
+(function($) {
+  var searchForm = $("#search-block-form");
+  var searchField = searchForm.find(".input-group");
+  var searchButton = generateSearchButton();
+  $(document).ready(function () {
+    searchField.closest("section").append(searchButton);
+    searchForm.css({ "float" : "right", width : "100%" });
+    searchField.css({ width: 0, "float" : "right" });
+    searchField.find(".input-group-btn").hide();
+
+    $(document).on("click", function (e) {
+      if (e.target.id === "show-search") {
+        var searchButton = e.target;
+        searchField.find(".input-group-btn").show();
+        searchField.animate({ width : "100%" });
+        $(searchButton).animate({ opacity : 0 });
+      }
+    });
+  /*
+  */
+
+
+  });
+
+  function generateSearchButton() {
+    var button = "<button id='show-search' class='show-search'>";
+    button += "<span class='icon glyphicon glyphicon-search'></span>";
+    button += "</button>";
+    return button;
+  }
+})(jQuery);
+
 (function($){
 	var extLinks = $('.popup');
 	var width = $(window).width() / 1.5;
@@ -101,6 +152,8 @@
 		}
 	}
 })(jQuery);
+
+
 </script>
 
 </body>
