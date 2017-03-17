@@ -68,11 +68,6 @@
     <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"></script>
   <![endif]-->
   <?php print $scripts; ?>
-  <style>
-    .js #block-search-form {
-      margin-left: -1000000px;
-    }
-  </style>
 </head>
   <!--[if lt IE 9]>
     <body class="<?php print $classes . ' ieclass'; ?>" <?php print $attributes;?>>
@@ -89,70 +84,8 @@
   <?php print $page_bottom; ?>
 
 <!-- Popup window for external links -->
-<style>
-  .show-search {
-    position: absolute;
-    display: block;
-    z-index: 500;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: #DDE6EB 2px solid;
-    background: #515A71;
-    color: #fff;
-    top: 32px;
-    right: 11px;
-    font-size: 1.2em;
-  }
-  .show-search .glyphicon-search {
-    top: 3px;
-  }
-</style>
 
 <script>
-(function($) {
-  var searchForm = $("#search-block-form");
-  var searchField = searchForm.find(".input-group");
-  var searchButton = generateSearchButton();
-  $(document).ready(function () {
-    $("#block-search-form").css({ marginLeft: 0 });
-    searchField.closest("section").append(searchButton);
-    searchForm.css({ "float" : "right", width : 0 });
-    searchField.css({ width: 0, "float" : "right" });
-    searchField.find(".input-group-btn").hide();
-
-    $(document).on("click", function (e) {
-      if ( searchCircleWasClicked(e.target) || searchGlassWasClicked(e.target) ) {
-        var searchButton = searchCircleWasClicked(e.target) ? e.target : $(e.target).closest("button");
-        searchField.find(".input-group-btn").show();
-        searchForm.animate({ width : "100%" });
-        searchField.animate({ width : "100%" });
-        $(searchButton).animate({ opacity : 0 }, function () {
-          $(searchButton).css({ left: "-1000000px" });
-        });
-      }
-    });
-  /*
-  */
-
-
-  });
-
-  function searchCircleWasClicked (target) {
-    return target.id === "show-search";
-  }
-
-  function searchGlassWasClicked (target) {
-    return target.className.split(" ").indexOf("glyphicon-search") !== -1;
-  }
-  function generateSearchButton() {
-    var button = "<button id='show-search' class='show-search'>";
-    button += "<span class='icon glyphicon glyphicon-search'></span>";
-    button += "</button>";
-    return button;
-  }
-})(jQuery);
-
 (function($){
 	var extLinks = $('.popup');
 	var width = $(window).width() / 1.5;
